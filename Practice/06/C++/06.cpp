@@ -20,7 +20,13 @@ int main()
     double b = input<double>("Input b = ");
     double c = input<double>("Input c = ");
 
-    if (a == 0)
+    if (a == 0 && b == 0)
+    {
+        c == 0 ? 
+        (cout << "x - Real numbers"):
+        (cout << "No solution");
+    }
+    else if (a == 0)
     {
         cout << "x = " << -c/b << endl;
     }

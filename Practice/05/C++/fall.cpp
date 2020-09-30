@@ -23,5 +23,5 @@ int main()
     v0 = input<double>("Input v0: ");
     t = input<int>("Input t: ");
 
-    cout << "Distance = " << x0 + v0 * t + G * t * t / 2 << endl;
+    cout << "Distance = " << x0 + v0 * t - G * t * t / 2 << endl;
 }

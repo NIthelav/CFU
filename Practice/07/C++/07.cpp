@@ -3,9 +3,9 @@
 
 using namespace std;
 
-float square(float a, float b, float c);
-float input_len();
-float input_coor();
+void square(double a, double b, double c);
+void input_len();
+void input_coor();
 
 int main()
 {
@@ -16,29 +16,32 @@ int main()
 
     switch (a)
     {
-    case 0:
-        cout << "S = " << input_len();
+    case 1:
+        input_len();
         break;
     
-    case 1:
-        cout << "S = " << input_coor();
+    case 2:
+        input_coor();
+        break;
+    default:
+        cout << "Incorrect input";
         break;
     }
 }
 
-float input_len()
+void input_len()
 {
-    float a, b, c;
+    double a, b, c;
     cout << "Input 3 length" << endl;
     cin >> a
         >> b
         >> c;
-    return square(a, b, c);
+    square(a, b, c);
 }
 
-float input_coor()
+void input_coor()
 {
-    float a1, a2,
+    double a1, a2,
         b1, b2,
         c1, c2;
     cout << "Input 3 coordinates" << endl;
@@ -46,18 +49,26 @@ float input_coor()
         >> b1 >> b2
         >> c1 >> c2;
     
-    float a = sqrt(pow((a1 - b1), 2)
+    double a = sqrt(pow((a1 - b1), 2)
             + pow((a2 - b2), 2));
-    float b = sqrt(pow((b1 - c1), 2)
+    double b = sqrt(pow((b1 - c1), 2)
             + pow((b2 - c2), 2));
-    float c = sqrt(pow((c1 - a1), 2)
+    double c = sqrt(pow((c1 - a1), 2)
             + pow((c2 - a2), 2));
     
-    return square(a, b, c);
+    square(a, b, c);
 }
 
-float square(float a, float b, float c)
+void square(double a, double b, double c)
 {
-    float p = (a + b + c) / 2;
-    return sqrt(p * (p - a) * (p - b) * (p - c));
+    if (a + b < c || b + c < a || a + c < b)
+    {
+        cout << "Triangle does not exist";
+    }
+    else
+    {
+    double p = (a + b + c) / 2;
+    cout << "S = " << sqrt(p * (p - a) * (p - b) * (p - c));
+    }
+    
 }

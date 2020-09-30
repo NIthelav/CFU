@@ -11,5 +11,5 @@ int main()
 
 	double f1 = 3, f2 = 3.14;
 	cout << "double 3 = " << f1 << endl;
-	cut << "double 3.14 = " << f2 << endl << endl;
+	cout << "double 3.14 = " << f2 << endl << endl;
 }

@@ -1,5 +1,6 @@
 from random import randint
 
+random.seed()
 number = randint(0, 100)
 
 print("Попробуй угадать число")

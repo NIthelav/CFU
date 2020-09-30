@@ -2,31 +2,8 @@
 
 using namespace std;
 
-void Test_operators (int a, int b)
-{
-    cout << "a + b = " << a + b << endl;
-    cout << "a - b = " << a - b << endl;
-    cout << "a / b = " << a / b << endl;
-    cout << "a * b = " << a * b << endl;
-}
-
-void Test_operators (double a, double b)
-{
-    cout << "a + b = " << a + b << endl;
-    cout << "a - b = " << a - b << endl;
-    cout << "a / b = " << a / b << endl;
-    cout << "a * b = " << a * b << endl;
-}
-
-void Test_operators (int a, double b)
-{
-    cout << "a + b = " << a + b << endl;
-    cout << "a - b = " << a - b << endl;
-    cout << "a / b = " << a / b << endl;
-    cout << "a * b = " << a * b << endl;
-}
-
-void Test_operators (double a, int b)
+template <typename T, typename U>
+void Test_operators (T a, U b)
 {
     cout << "a + b = " << a + b << endl;
     cout << "a - b = " << a - b << endl;

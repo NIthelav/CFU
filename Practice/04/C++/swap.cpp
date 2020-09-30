@@ -2,13 +2,6 @@
 
 using namespace std;
 
-void swapping(int *a, int *b) 
-{
-    *a = *a + *b;
-    *b = *a - *b;
-    *a = *a - *b;
-}
-
 int main()
 {
     int a, b;
@@ -19,8 +12,19 @@ int main()
     cin >> b;
     cout << endl;
 
-    swapping(&a, &b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    
     cout << "a = " << a << " "
         << "b = " << b << endl;
 
+
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "a = " << a << " "
+        << "b = " << b << endl;
 }

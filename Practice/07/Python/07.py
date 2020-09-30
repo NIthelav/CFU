@@ -5,6 +5,10 @@ def s_from_len():
     b = int(input("Введите длину b: "))
     c = int(input("Введите длину c: "))
 
+    if (a + b < c or b + c < a or a + c < b):
+        print("Такого треугольника не существует")
+        return
+
     p = (a + b + c) / 2
     s = sqrt(p * (p - a) * (p - b) * (p - c))
     print("Площадь равна =", s)
@@ -20,6 +24,10 @@ def s_from_coor():
             + pow((b2 - c2), 2))
     c = sqrt(pow((c1 - a1), 2)
             + pow((c2 - a2), 2))
+
+    if (a + b < c or b + c < a or a + c < b):
+        print("Такого треугольника не существует")
+        return
 
     p = (a + b + c) / 2
     s = sqrt(p * (p - a) * (p - b) * (p - c))

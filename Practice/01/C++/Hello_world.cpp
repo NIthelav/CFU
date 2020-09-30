@@ -4,5 +4,5 @@ using std::endl;
 
 int main()
 {
-	cout << "Результат выражения 2+2*2 = " << 2 + 2 * 2 << endl;
+	cout << "Result of operation 2+2*2 = " << 2 + 2 * 2 << endl;
 }
